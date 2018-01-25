@@ -12,9 +12,6 @@ function SubProvider() {
 SubProvider.prototype.setEngine = function(engine) {
   const self = this
   self.engine = engine
-  engine.on('block', function(block) {
-    self.currentBlock = block
-  })
 }
 
 SubProvider.prototype.handleRequest = function(payload, next, end) {
